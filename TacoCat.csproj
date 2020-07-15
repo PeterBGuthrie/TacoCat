@@ -115,6 +115,7 @@
     <Content Include="css\bootstrap\bootstrap-grid.css" />
     <Content Include="css\bootstrap\bootstrap-reboot.css" />
     <Content Include="css\bootstrap\bootstrap.css" />
+    <Content Include="css\solveCodeStyle.css" />
     <Content Include="css\jquery-ui.css" />
     <Content Include="css\jquery.fancybox.min.css" />
     <Content Include="css\magnific-popup.css" />
