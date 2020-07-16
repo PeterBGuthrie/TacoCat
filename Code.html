@@ -27,6 +27,9 @@
     <link href="css/solveCodeStyle.css" rel="stylesheet" />
 
     <link rel="icon" href="favicon/favicon.ico" />
+
+    <!--Prism code-->
+    <link href="css/prism.css" rel="stylesheet" />
 </head>
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 
@@ -70,7 +73,7 @@
                     <div class="ml-auto">
                         <nav class="site-navigation position-relative text-right" role="navigation">
                             <ul class="site-menu main-menu site-menu-dark js-clone-nav mr-auto d-none d-lg-block">
-                                <li class="cta"><a href="http://www.peterg.info" class="nav-link"><span class="rounded border border-dark">Back to Portfolio</span></a></li>
+                                <li class="cta"><a href="http://www.peterg.info" class="nav-link"><span style="color:#fff;"class="rounded border border-light">Back to Portfolio</span></a></li>
                             </ul>
                         </nav>
                         <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black float-right"><span class="icon-menu h3"></span></a>
@@ -83,13 +86,35 @@
         <div class="intro-section" id="home-section">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-lg-4 mr-auto" data-aos="fade-up">
-                        <h1>Taco Cat JS Code</h1>
-                        <p class="mb-5">
-
-                        </p>
-
-
+                    <div class="col-lg-12 mr-auto" data-aos="fade-up">
+                        <pre>
+<code class="language-javascript line-numbers">$("#btnTest").click(function () {
+let inputWord = $("#pal").val()
+// Test length
+if (inputWord.length < 2) {
+// Request user us a longer character set
+$("#sub").text("Please use two or more characters");
+} else {
+let word = inputWord.replace(/\s|\'|\"/g, '').toLowerCase();
+let reversedInput = inputWord.split('').reverse().join('');
+let revword = reversedInput.replace(/\s|\'|\"/g, '').toLowerCase();
+let message = `Your input was: ${inputWord}. Reversed is ${reversedInput}.`;
+let result = ""
+if (word == revword) {
+result = "Congratulations";
+} else {
+result = "Unfortunately";
+};
+$("#title").text(result);
+$("#sub").text(message);
+}
+});
+// Clear page
+$("#btnclear").click(function () {
+$("#pal").val("");
+$("#title, #sub").text("");
+ });</code>
+                        </pre>
                     </div>
                 </div>
             </div>
@@ -124,6 +149,6 @@
     <script src="js/jquery.fancybox.min.js"></script>
     <script src="js/jquery.sticky.js"></script>
     <script src="js/main.js"></script>
-
+    <script src="js/prism.js"></script>
 </body>
 </html>

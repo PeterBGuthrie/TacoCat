@@ -115,6 +115,7 @@
     <Content Include="css\bootstrap\bootstrap-grid.css" />
     <Content Include="css\bootstrap\bootstrap-reboot.css" />
     <Content Include="css\bootstrap\bootstrap.css" />
+    <Content Include="css\prism.css" />
     <Content Include="css\solveCodeStyle.css" />
     <Content Include="css\jquery-ui.css" />
     <Content Include="css\jquery.fancybox.min.css" />
@@ -152,6 +153,7 @@
     <Content Include="js\mediaelement-and-player.min.js" />
     <Content Include="js\owl.carousel.min.js" />
     <Content Include="js\popper.min.js" />
+    <Content Include="js\prism.js" />
     <Content Include="js\slick.min.js" />
     <Content Include="js\typed.js" />
     <Content Include="obj\Debug\FizzBuzz.csproj.FileListAbsolute.txt" />
