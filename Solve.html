@@ -58,8 +58,9 @@
                                     <a class="dropdown-toggle nav-link" data-toggle="dropdown">Mini Projects</a>
                                     <div class="dropdown-menu bgColor">
                                         <div class="dropdown-content">
-                                            <a href="https://tacocatisheretohelp.netlify.app" class="dropdown-item nav-link">Taco cat</a>
-                                            <a href="https://tacocatisheretohelp.netlify.app" class="dropdown-item nav-link">Taco cat</a>
+                                            <a href="https://fizzbuzzpeterg.netlify.app/" class="dropdown-item nav-link">FizzBuzz</a>
+                                            <a href="https://sumofallfearspeterg.netlify.app/" class="dropdown-item nav-link">Sum of All Fears</a>
+                                            <a href="https://sunsethillspeterg.netlify.app/" class="dropdown-item nav-link">Sunset Hills</a>
                                         </div>
                                     </div>
                                 </li>
@@ -99,8 +100,8 @@
 
                     <div class="col-lg-2 ml-auto" data-aos="fade-up" data-aos-delay="100">
                         <div id="output" style="color:#fff;">
-                            <p id="title"></p>
-                            <p id="sub"></p>
+                            <p style="color:#fff; "id="title"></p>
+                            <p style="color:#fff; "id="sub"></p>
 
                         </div>
                     </div>
@@ -151,23 +152,26 @@
                 // Request user us a longer character set
                 $("#sub").text("Please use two or more characters");
             } else {
-              let word = inputWord.toLowerCase().replace(/\s|\'|\"/g, '');
+                let word = inputWord.replace(/\s|\'|\"/g, '').toLowerCase();
 
-               let reversedInput = inputWord.split('').reverse().join('');
+              let reversedInput = inputWord.split('').reverse().join('');
 
-                let revword = reversedInput.toLowerCase().replace(/\s|\'|\"/g, '');
+                let revword = reversedInput.replace(/\s|\'|\"/g, '').toLowerCase();
 
-                let message = `Your input was: ${inputWord}. Reversed is ${reversedInput}.`;
-                let result = ""
+              let message = `Your input was: ${inputWord}. Reversed is ${reversedInput}.`;
+              let result = ""
 
-                if (word == revword) {
-                    result = `That means ${inputWord} is a palindrome!`;
-                } else {
-                    result = `That means ${inputWord} is not a plaindrome!`;
-                };
-                $("#output").text(message + " " + result);
+              if (word == revword) {
+                  result = "Congratulations";
+              } else {
+                  result = "Unfortunately";
+              };
+              $("#title").text(result);
+              $("#sub").text(message);
             }
         });
+
+        // Clear page
         $("#btnclear").click(function () {
             $("#pal").val("");
             $("#output").text("");
