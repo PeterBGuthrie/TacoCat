@@ -155,6 +155,7 @@
     <Content Include="js\popper.min.js" />
     <Content Include="js\prism.js" />
     <Content Include="js\slick.min.js" />
+    <Content Include="js\TacoCatCode.js" />
     <Content Include="js\typed.js" />
     <Content Include="obj\Debug\FizzBuzz.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\FizzBuzz.dll" />

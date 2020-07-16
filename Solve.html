@@ -92,8 +92,9 @@
                             </div>
                         </p>
                         <p>
-                            <button id="btnTest"  class="btn btn-outline-light py-3 px-5">Test</button>
-                            <button id="btnclear" class="btn btn-outline-light py-3 px-5">Clear</button>
+                            <button id="btnTest" class="btn btn-outline-light    py-2 px-4">Test</button>
+                            <button id="btnclear" class="btn btn-outline-light   py-2 px-4">Clear</button>
+                            <a href="Code.html" class="btn btn-outline-light     py-2 px-4">See the Code</a>
                         </p>
 
                     </div>
@@ -148,9 +149,9 @@
 
             // Test length
             if (inputWord.length < 2) {
-
                 // Request user us a longer character set
-                $("#sub").text("Please use two or more characters");
+                $("#title").text("Attention!");
+                $("#sub")  .text("Please use two or more characters.");
             } else {
                 let word = inputWord.replace(/\s|\'|\"/g, '').toLowerCase();
 
