@@ -94,7 +94,7 @@
                         <p>
                             <button id="btnTest" class="btn btn-outline-light    py-2 px-4">Test</button>
                             <button id="btnclear" class="btn btn-outline-light   py-2 px-4">Clear</button>
-                            <a href="Code.html" class="btn btn-outline-light     py-2 px-4">See the Code</a>
+                            <a      id="btndis"  href="Code.html" class="btn btn-outline-light     py-2 px-4">See the Code</a>
                         </p>
 
                     </div>
@@ -144,7 +144,13 @@
 
 
     <script>
+
+        $("#btndis").hide();
+
         $("#btnTest").click(function () {
+
+            $("#btndis").show();
+
             let inputWord = $("#pal").val()
 
             // Test length
