@@ -87,17 +87,22 @@
                         <p class="mb-5">
                             Enter a word, phrase, or number below and click the button to see if it is a palindrome.
                             <div class="form-group">
-                                <input type="text" class="form-control" id="usr" placeholder="Please enter your number here">
+                                <input  id="pal"type="text" class="form-control" placeholder="Please enter text here">
                             </div>
                         </p>
                         <p>
-                            <a href="Solve.html" class="btn btn-outline-light py-3 px-5">Test</a>
-                            <a href="Solve.html" class="btn btn-outline-light py-3 px-5">Clear</a>
+                            <a id="btnTest"  href="Solve.html" class="btn btn-outline-light py-3 px-5">Test</a>
+                            <a id="btnclear" href="Solve.html" class="btn btn-outline-light py-3 px-5">Clear</a>
                         </p>
 
                     </div>
-                    <div class="col-lg-2 ml-auto" data-aos="fade-up" data-aos-delay="100">
 
+                    <div class="col-lg-2 ml-auto" data-aos="fade-up" data-aos-delay="100">
+                        <div id="output" style="color:#fff;">
+                            <p id="title"></p>
+                            <p id="sub"></p>
+
+                        </div>
                     </div>
                 </div>
             </div>
@@ -133,9 +138,41 @@
     <script src="js/aos.js"></script>
     <script src="js/jquery.fancybox.min.js"></script>
     <script src="js/jquery.sticky.js"></script>
-
-
     <script src="js/main.js"></script>
 
+
+    <script>
+        $("#btnTest").click(function () {
+            let inputWord = $("#pal").val()
+
+            // Test length
+            if (inputWord.length < 2) {
+
+                // Request user us a longer character set
+                $("#sub").text("Please use two or more characters");
+            } else {
+              let word = inputWord.toLowerCase().replace(/\s|\'|\"/g, '');
+
+               let reversedInput = inputWord.split('').reverse().join('');
+
+                let revword = reversedInput.toLowerCase().replace(/\s|\'|\"/g, '');
+
+                let message = `Your input was: ${inputWord}. Reversed is ${reversedInput}.`;
+                let result = ""
+
+                if (word == revword) {
+                    result = `That means ${inputWord} is a palindrome!`;
+                } else {
+                    result = `That means ${inputWord} is not a plaindrome!`;
+                };
+                $("#output").text(message + " " + result);
+            }
+        });
+        $("#btnclear").click(function () {
+            $("#pal").val("");
+            $("#output").text("");
+
+        });
+    </script>
 </body>
 </html>
